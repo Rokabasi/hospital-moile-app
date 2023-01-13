@@ -35,9 +35,7 @@ const Home = () => {
         showsHorizontalScrollIndicator={false}
         style={dashboardStyles.scrollableList}
         renderItem={({ item }) => {
-          return (
-            <ActivityItem item={item}/>
-          );
+          return <ActivityItem item={item} />;
         }}
       />
 
@@ -45,6 +43,20 @@ const Home = () => {
 
       {/* Liste des symptomes */}
 
+      <View style={dashboardStyles.title}>
+        <Text>Quel symptomes avez-vous ?</Text>
+      </View>
+
+      <FlatList
+        data={fakeActivity}
+        key={(item) => item.id}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        style={dashboardStyles.scrollableList}
+        renderItem={({ item }) => {
+          return <ActivityItem item={item} />;
+        }}
+      />
     </ScrollView>
   );
 };
