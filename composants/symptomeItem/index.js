@@ -1,12 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import styles from "./style";
 
-const SymptomeItem = () => {
+const SymptomeItem = ({ item }) => {
   return (
-    <View>
-      <Text>index</Text>
-    </View>
-  )
-}
+    <TouchableOpacity style={styles.item}>
+      <View>
+        <Image source={item.img} style={styles.itemImg} />
 
-export default SymptomeItem
+        {/* <Text style={styles.mainText}>{item.mainText}</Text> */}
+        <Text style={styles.subText}>{item.libelle}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+export default SymptomeItem;

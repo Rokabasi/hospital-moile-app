@@ -1,17 +1,21 @@
+import malaria from "../assets/images/malaria.png";
+import grippe from "../assets/images/grippe.png";
+import maltete from "../assets/images/maltete.png";
+
 export const fakeSymptomes = [
   {
     id: 1,
-    img: "img1.png",
-    libelle: "Mal à la tête",
+    libelle: "mal à la tête",
+    img: malaria,
   },
   {
     id: 2,
-    img: "img1.png",
-    libelle: "Fièvre",
+    libelle: "Rhume",
+    img: grippe,
   },
   {
     id: 3,
-    img: "img1.png",
-    libelle: "Rhume",
+    libelle: "Fièvre",
+    img: maltete,
   },
 ];

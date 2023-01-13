@@ -6,7 +6,7 @@ const ActivityItem = ({item}) => {
   return (
     <TouchableOpacity style={styles.scrollableListItem}>
       <Image
-        source={require("../../assets/images/medecine.png")}
+        source={item.img}
         style={styles.fakeDataImg}
       />
 
