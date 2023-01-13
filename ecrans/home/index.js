@@ -10,6 +10,7 @@ import React from "react";
 import { SvgXml } from "react-native-svg";
 import dashboardStyles from "./style.js";
 import { fakeActivity } from "../../fakeData/fakeActivity.js";
+import ActivityItem from "../../composants/activityItem/index.js";
 
 const Home = () => {
   return (
@@ -35,20 +36,15 @@ const Home = () => {
         style={dashboardStyles.scrollableList}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity style={dashboardStyles.scrollableListItem}>
-              <Image
-                source={require("../../assets/images/medecine.png")}
-                style={dashboardStyles.fakeDataImg}
-              />
-
-              <Text style={dashboardStyles.mainText}>{item.mainText}</Text>
-              <Text style={dashboardStyles.subText}>{item.subText}</Text>
-            </TouchableOpacity>
+            <ActivityItem item={item}/>
           );
         }}
       />
 
       {/* fin liste des activités */}
+
+      {/* Liste des symptomes */}
+
     </ScrollView>
   );
 };
