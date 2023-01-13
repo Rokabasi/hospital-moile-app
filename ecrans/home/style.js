@@ -27,6 +27,9 @@ const dashboardStyles = StyleSheet.create({
   title : {
     paddingHorizontal : PADDING.horizontal,
     paddingVertical : PADDING.vertical
+  },
+  titleBold : {
+    fontWeight : 'bold'
   }
  
 });

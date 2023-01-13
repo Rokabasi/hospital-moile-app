@@ -11,6 +11,8 @@ import { SvgXml } from "react-native-svg";
 import dashboardStyles from "./style.js";
 import { fakeActivity } from "../../fakeData/fakeActivity.js";
 import ActivityItem from "../../composants/activityItem/index.js";
+import { fakeSymptomes } from "../../fakeData/fakeSymptome.js";
+import SymptomeItem from "../../composants/symptomeItem/index.js";
 
 const Home = () => {
   return (
@@ -44,17 +46,17 @@ const Home = () => {
       {/* Liste des symptomes */}
 
       <View style={dashboardStyles.title}>
-        <Text>Quel symptomes avez-vous ?</Text>
+        <Text style={dashboardStyles.titleBold}>Quel symptomes avez-vous ?</Text>
       </View>
 
       <FlatList
-        data={fakeActivity}
+        data={fakeSymptomes}
         key={(item) => item.id}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         style={dashboardStyles.scrollableList}
         renderItem={({ item }) => {
-          return <ActivityItem item={item} />;
+          return <SymptomeItem item={item} />;
         }}
       />
     </ScrollView>
