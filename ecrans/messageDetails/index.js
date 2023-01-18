@@ -12,7 +12,7 @@ const MessageDetails = ({ route, navigation }) => {
   });
 
   return (
-    <View>
+    <View style={{flex:1}}>
       <FlatList
         data={fakeConversation}
         keyExtractor={(item) => item.id}
