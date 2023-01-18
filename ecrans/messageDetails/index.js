@@ -1,6 +1,8 @@
 import { View, Text, FlatList } from "react-native";
 import React, { useEffect } from "react";
-import { fakeConversation } from "../fakeData/fakeConversation";
+import { fakeConversation } from "../../fakeData/fakeConversation";
+import Message from "../../composants/message";
+import MessageInput from "../../composants/messageInput";
 
 const MessageDetails = ({ route, navigation }) => {
   const { item } = route.params;
@@ -15,10 +17,11 @@ const MessageDetails = ({ route, navigation }) => {
         data={fakeConversation}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          return <Text>{item.id}</Text>;
+          return <Message item={item}/>;
         }}
         showsVerticalScrollIndicator = {false}
       />
+      <MessageInput/>
     </View>
   );
 };

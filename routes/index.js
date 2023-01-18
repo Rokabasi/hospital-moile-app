@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../ecrans/home";
 import BottomTab from "../ecrans/tabs";
-import MessageDetails from '../messageDetails'
+import MessageDetails from '../ecrans/messageDetails'
 
 const Routes = () => {
   const Stack = createNativeStackNavigator();
