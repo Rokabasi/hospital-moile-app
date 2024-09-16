@@ -72,7 +72,7 @@ const Home = () => {
       </View>
 
       <View style={dashboardStyles.doctorsContainer}>
-        {fakeDoctor.splice(0,3).map((doctor, index) => {
+        {fakeDoctor.map((doctor, index) => {
           return (
             <TouchableOpacity
               key={doctor.id}
